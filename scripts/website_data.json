@@ -1,0 +1,100 @@
+{
+  "pages": {
+    "en": {
+      "logo": "",
+      "menu": [
+        {
+          "name": "Home",
+          "link": ""
+        },
+        {
+          "name": "About Me",
+          "link": ""
+        },
+        {
+          "name": "Services",
+          "link": ""
+        },
+        {
+          "name": "Work",
+          "link": ""
+        },
+        {
+          "name": "Contact",
+          "link": ""
+        },
+        {
+          "name": "FAQ",
+          "link": ""
+        }
+      ],
+      "bio": {},
+      "work": {
+        "blog": {
+          "personal": [],
+          "paid": []
+        },
+        "services": [
+          {
+            "name": "Consultation",
+            "img": "",
+            "link": ""
+          }
+        ]
+      },
+      "contact": {
+        "personal": {
+          "socials": [
+            {
+              "link": "",
+              "icon": ""
+            }
+          ],
+          "form": {
+            "placeholder":{
+              "fname": "first name",
+              "lname": "last name",
+              "subject": "subject",
+              "email": "email address",
+              "phone": "phone number (optional)",
+              "message": "write your message here"
+            }
+          }
+        },
+        "work": {
+          "socials": [
+            {
+              "link": "",
+              "icon": ""
+            }
+          ],
+          "website": {
+            "link": "",
+            "icon": "",
+            "name": ""
+          }, 
+          "phone": "",
+          "location": ""
+        }
+      },
+      "faq": [
+        {
+          "question": "",
+          "answer": ""
+        },
+        {
+          "question": "",
+          "answer": ""
+        }
+      ],
+      "footer": {
+      }
+    },
+    "ro": {
+  
+    }
+  },
+  "settings": {
+
+  }
+}
