@@ -13,6 +13,7 @@
   --tg-main-color-active: #40bfc1;
   --tg-main-color-page-background: #F8F9FA;
   --tg-main-color-page-element: #F8F9FA;
+  --tg-main-color-page-element-dark: #ededed;
   --tg-main-color-page-element-light: #f3f3f3;
 }
 
@@ -150,8 +151,8 @@ body, html {
   }
 
   .ftco-navbar-light .navbar-nav>.nav-item>.nav-link:hover {
-    color: var(--tg-main-color-active);
-    border-left: 2px solid var(--tg-main-color-active);
+    /* color: var(--tg-main-color-active);
+    border-left: 2px solid var(--tg-main-color-active); */
   }
 
   .ftco-navbar-light .navbar-nav>.nav-item>.nav-link:hover:before {
@@ -284,6 +285,57 @@ body, html {
 }
 
 /* NAVBAR END */
+/* ------------------------------------------------------------ */
+/* ABOUT ME BEGIN */
+
+.tg-about-debug {
+  /* border: 1px solid #000; */
+}
+
+.tg-about-round-picture-img {
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(0, 0, 0, .25);
+  background: #fff;
+  width: 500px !important;
+  height: 500px;
+  padding: 0px;
+  margin: 15px auto !important;
+}
+
+.tg-about-title {
+  /* margin-top: 100px; */
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--tg-main-color-inactive);
+}
+
+.tg-about-description {
+  /* align-self: baseline; */
+  width: 350px !important;
+  text-align: center;
+  align-self: center;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--tg-main-color-page-element-dark);
+}
+
+.tg-about-behind-bg-container {
+  /* transform: translateY(-80%); */
+  /* z-index: 340; */
+  /* position: absolute; */
+}
+
+.tg-about-behind-bg {
+  /* align-self: flex-start; */
+  /* display: block; */
+  width: 100px;
+  height: 400px;
+  /* z-index: 9; */
+  position: absolute;
+  
+}
+
+/* ABOUT ME END */
 /* ------------------------------------------------------------ */
 /* CAROUSEL BEGIN */
 
