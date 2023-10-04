@@ -102,6 +102,35 @@
         `<div class="item" data-bs-placement="top" data-bs-toggle="tooltip" title="${tgFreeWork.tooltip}">
           <a href="${element.link}" target="_blank">
             <div class="col-md-12 wow fadeInUp ">
+              <div class="main_services-work text-center" >
+                <img class="round_picture_img" src="${element.img}">
+                <h3 class="mt-3"> 
+                  ${element.title}
+                </h3>
+                <p>
+                  ${contentText} 
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>`;
+
+      $('#owl-carousel-container-work').trigger('add.owl.carousel', elemContent);
+      $('#owl-carousel-container-work').trigger('refresh.owl.carousel');
+    });
+
+    tgFreeWork.content.forEach(element => {
+
+      let contentText = element.text;
+      if (contentText.length >= 250) { // max item post character count
+        contentText = contentText.substring(0, 250 - 3);
+        contentText += '...';
+      }
+
+      const elemContent =
+        `<div class="item" data-bs-placement="top" data-bs-toggle="tooltip" title="${tgFreeWork.tooltip}">
+          <a href="${element.link}" target="_blank">
+            <div class="col-md-12 wow fadeInUp ">
               <div class="main_services-posts text-center" >
                 <img class="round_picture_img" src="${element.img}">
                 <h3 class="mt-3"> 
