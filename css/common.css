@@ -1,0 +1,18 @@
+:root {
+  --grey: #f1f1f1;
+  --white: #fff;
+  --yellow: #ffb636;
+  --dark: #232323;
+  --light_dark: #555;
+  --magenta: #7f4399;
+  --dark_magenta: #d883fd;
+  --light_orange: #ff5e14;
+
+  --tg-main-color-inactive-dark: #7e7e7e;
+  --tg-main-color-inactive: #dddddd;
+  --tg-main-color-active: #40bfc1;
+  --tg-main-color-page-background: #F8F9FA;
+  --tg-main-color-page-element: #F8F9FA;
+  --tg-main-color-page-element-dark: #ededed;
+  --tg-main-color-page-element-light: #f3f3f3;
+}
