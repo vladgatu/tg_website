@@ -89,6 +89,8 @@
 (function ($) {
   "use strict";
   $(document).ready(function () {
+
+    // --- FILL WORK CAROUSEL FUNCTIONALITY ---
     tgFreeWork.content.forEach(element => {
 
       let contentText = element.text;
@@ -120,7 +122,7 @@
 
     $('[data-bs-toggle="tooltip"]').tooltip();
     $('[data-bs-toggle="tooltip"]').click(_ => {
-      console.log('CLICK_1');
+      console.log('CLICK_1'); // TODO :: remove this shit 
       $('[data-bs-toggle="tooltip"]').tooltip('hide');
     });
     $('[data-bs-toggle="tooltip"]').tooltip({ trigger: "hover" });
@@ -129,15 +131,52 @@
       $(this).tooltip('hide')
     });
 
-    $(window).on('scroll', function() {
-      const scrollTop = document.getElementById('btn-back-to-top');
-      if (window.scrollY > 200) {
-        scrollTop.style.visibility = "visible";
-          scrollTop.style.opacity = 1;
-        } else {
-          scrollTop.style.visibility = "hidden";
-          scrollTop.style.opacity = 0;
-        }
-    });
+
+    // --- PROGRESS & BACK TO TOP BUTTON FUNCTIONALITY ---
+    // $(window).on('scroll', function() {
+    //   const scrollTop = document.getElementById('btn-back-to-top');
+    //   if (window.scrollY > 200) {
+    //     scrollTop.style.visibility = "visible";
+    //       scrollTop.style.opacity = 1;
+    //     } else {
+    //       scrollTop.style.visibility = "hidden";
+    //       scrollTop.style.opacity = 0;
+    //     }
+    // });
+
+
+    var progressPath = document.querySelector('.progress-wrap path');
+		var pathLength = progressPath.getTotalLength();
+		progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
+		progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
+		progressPath.style.strokeDashoffset = pathLength;
+		progressPath.getBoundingClientRect();
+		progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';		
+		var updateProgress = function () {
+			var scroll = $(window).scrollTop();
+			var height = $(document).height() - $(window).height();
+			var progress = pathLength - (scroll * pathLength / height);
+			progressPath.style.strokeDashoffset = progress;
+		}
+		updateProgress();
+		$(window).scroll(updateProgress);	
+		var offset = 50;
+		var duration = 550;
+		jQuery(window).on('scroll', function() {
+			if (jQuery(this).scrollTop() > offset) {
+				jQuery('.progress-wrap').addClass('active-progress');
+			} else {
+				jQuery('.progress-wrap').removeClass('active-progress');
+			}
+		});				
+		jQuery('.progress-wrap').on('click', function(event) {
+      console.log('PULA');
+			// event.preventDefault();
+			// jQuery('html, body').animate({scrollTop: 0}, duration);
+      // document.getElementById('tg_about').scrollIntoView({behavior: 'smooth'});
+      window.scrollTo({top: 0, behavior: 'smooth'});
+			// return false;
+		});
+
   });
 })(jQuery); 
