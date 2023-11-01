@@ -287,6 +287,7 @@ body, html {
 
 .tg-about-title {
   /* margin-top: 100px; */
+  font-size: 40px;
   text-align: center;
   padding-bottom: 10px;
   border-bottom: 1px solid var(--tg-main-color-inactive);
@@ -315,6 +316,38 @@ body, html {
   height: 400px;
   /* z-index: 9; */
   position: absolute;
+  
+}
+
+@media (max-width: 991.98px) {
+  .tg-about-round-picture-img {
+    width: 400px !important;
+    height: 400px;
+  }
+
+  .tg-about-title {
+    font-size: 35px;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 768.0px) {
+  .tg-about-round-picture-img {
+    width: 360px !important;
+    height: 360px;
+  }
+
+  .tg-about-title {
+    font-size: 35px;
+    padding: 0px;
+    margin: 0px;
+  }
+}
+
+@media (max-width: 712.98px) {
+}
+
+@media (max-width: 514.98px) {
   
 }
 
