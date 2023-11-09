@@ -286,7 +286,6 @@ body, html {
 }
 
 .tg-about-title {
-  /* margin-top: 100px; */
   font-size: 40px;
   text-align: center;
   padding-bottom: 10px;
@@ -294,31 +293,21 @@ body, html {
 }
 
 .tg-about-description {
-  /* align-self: baseline; */
   width: 550px !important;
   text-align: start;
   text-indent: 40px;
-  /* align-self: center; */
   padding-left: 40px;
   padding-right: 30px;
   border-radius: 10px;
-  background-color: var(--tg-main-color-page-element-dark);
+  /* background-color: var(--tg-main-color-page-element-dark); */
+  background-color: #ededed9c;
+  
 }
 
-/* .tg-about-behind-bg-container { */
-  /* transform: translateY(-80%); */
-  /* z-index: 340; */
-  /* position: absolute; */
-/* } */
-
 .tg-about-behind-bg {
-  /* align-self: flex-start; */
-  /* display: block; */
   width: 100px;
   height: 400px;
-  /* z-index: 9; */
   position: absolute;
-  
 }
 
 @media (max-width: 1200px) {
@@ -334,8 +323,8 @@ body, html {
 
 @media (max-width: 991.98px) {
   .tg-about-round-picture-img {
-    width: 400px !important;
-    height: 400px;
+    width: 380px !important;
+    height: 380px;
   }
 
   .tg-about-title {
@@ -354,8 +343,8 @@ body, html {
 
 @media (max-width: 768.0px) {
   .tg-about-round-picture-img {
-    width: 360px !important;
-    height: 360px;
+    width: 420px !important;
+    height: 420px;
   }
 
   .tg-about-title {
@@ -364,26 +353,35 @@ body, html {
     margin: 0px;
   }
 
-  /* .tg-about-description {
+  .tg-about-description {
     width: 500px !important;
     text-indent: 25px;
     padding-left: 25px;
     padding-right: 20px;
     border-radius: 5px;
-  } */
-}
-
-@media (max-width: 712.98px) {
-  
+  }
 }
 
 @media (max-width: 514.98px) {
+  .tg-about-round-picture-img {
+    width: 380px !important;
+    height: 380px;
+  }
+
   .tg-about-description {
     max-width: 500px !important;
     text-indent: 20px;
     padding-left: 20px;
     padding-right: 15px;
     border-radius: 3px;
+  }
+
+  .tg-about-description {
+    width: 350px !important;
+    text-indent: 25px;
+    padding-left: 25px;
+    padding-right: 20px;
+    border-radius: 5px;
   }
 }
 

@@ -61,7 +61,7 @@
       return false;
     }
 
-    disableAllButtons(form);
+    disableAllButtons(form, true);
     var url = form.action;
     var xhr = new XMLHttpRequest();
     xhr.open('POST', url);
@@ -70,6 +70,7 @@
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
           form.reset();
+          disableAllButtons(form, false);
           var formElements = form.querySelector(".form-elements")
           if (formElements) {
             formElements.style.display = "none"; // hide form
@@ -96,10 +97,10 @@
   };
   document.addEventListener("DOMContentLoaded", loaded, false);
 
-  function disableAllButtons(form) {
+  function disableAllButtons(form, disable) {
     var buttons = form.querySelectorAll("button");
     for (var i = 0; i < buttons.length; i++) {
-      buttons[i].disabled = true;
+      buttons[i].disabled = disable;
     }
   }
 })();
