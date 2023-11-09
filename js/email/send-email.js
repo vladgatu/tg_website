@@ -57,9 +57,13 @@
     var data = formData.data;
 
     // If a honeypot field is filled, assume it was done so by a spam bot.
-    if (formData.honeypot) {
+    if (formData.honeypot || !handleNotValidResultFields(validateForm(formData))) {
       return false;
     }
+
+    // return false;
+
+    showFormStatusMessage('progress');
 
     disableAllButtons(form, true);
     var url = form.action;
@@ -71,14 +75,10 @@
         if (xhr.readyState === 4 && xhr.status === 200) {
           form.reset();
           disableAllButtons(form, false);
-          var formElements = form.querySelector(".form-elements")
-          if (formElements) {
-            formElements.style.display = "none"; // hide form
-          }
-          var thankYouMessage = form.querySelector(".form-message-success");
-          if (thankYouMessage) {
-            thankYouMessage.style.display = "block";
-          }
+          showFormStatusMessage('success');
+        } else {
+          disableAllButtons(form, false);
+          showFormStatusMessage('warning');
         }
     };
     // url encode form data for sending as post data
@@ -103,4 +103,123 @@
       buttons[i].disabled = disable;
     }
   }
+
+  function showFormStatusMessage(entity) {
+    var postMessages = document.querySelectorAll(".tg-message-post-form");
+    for (var i = 0; i < postMessages.length; i++) {
+      postMessages[i].style.display = "none";
+    }
+
+    switch (entity) {
+      case 'success': 
+        var message = document.querySelector("#form-message-success");
+        message.style.display = "block";
+        break;
+      case 'warning': 
+        var message = document.querySelector("#form-message-warning");
+        message.style.display = "block";
+        break;
+      case 'warning-fields': 
+        var message = document.querySelector("#form-message-warning-fields");
+        message.style.display = "block";
+        break;
+      case 'progress': 
+        var message = document.querySelector("#form-message-progress");
+        message.style.display = "block";
+        break;
+      default: 
+        console.log(`Could not find entity : ${entity}`); 
+        break;
+    }
+  }
+
+  function handleNotValidResultFields(fields) {
+    if (!fields) {
+      return true;
+    }
+
+    var fieldsElements = document.querySelectorAll(".form-control-text-error");
+    fieldsElements.forEach((elem) => {
+      elem.classList.remove("form-control-text-error");
+    });
+
+    fields.forEach((elem) => {
+      var element = document.querySelector(`#${elem}`);
+      element.classList.add("form-control-text-error");
+    });
+
+    showFormStatusMessage("warning-fields");
+
+    return false;
+  }
+
+  function validateForm(formData) {
+    var fieldList = []
+
+    // console.log(formData);
+
+    if (!validateEmail(formData.data.email)) {
+      fieldList.push('email');
+    }
+
+    if (!validatePhone(formData.data.phone, 20)) {
+      fieldList.push('phone');
+    }
+
+    if (!validateJustText(formData.data.first_name)) {
+      fieldList.push('first_name');
+    }
+
+    if (!validateJustText(formData.data.last_name)) {
+      fieldList.push('last_name');
+    }
+
+    if (!validateAnyText(formData.data.subject, 100)) {
+      fieldList.push('subject');
+    }
+
+    if (!validateAnyText(formData.data.message, 1500)) {
+      fieldList.push('message');
+    }
+
+    // console.log(fieldList);
+
+    return fieldList;
+  }
+
+  function validatePhone(elm, maxLen = 20) {
+    const trimElm = elm.trim();
+    if (trimElm.length < 3 || trimElm.length > maxLen) {
+      return false;
+    }
+    return trimElm.match(/^\+[0-9]+|[0-9]+$/) != null;
+  }
+  
+  function validateEmail(elm, maxLen = 200) {
+    const trimElm = elm.trim();
+    if (trimElm.length < 4 || trimElm.length > maxLen) {
+      return false;
+    } 
+    return trimElm.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/) != null;
+  }
+  
+  function validateJustText(elm, maxLen = 150) {
+    const trimElm = elm.trim();
+    // if (trimElm.length < 1 || trimElm.length > maxLen) {
+    //   return false;
+    // }
+    // return trimElm.match(`/^[a-zA-Z ]{1,${maxLen}}$/`) != null;
+    return trimElm.match(/^[a-zA-Z ]{1,50}$/) != null;
+  }
+
+  function validateAnyText(elm, maxLen = 200) {
+    const trimElm = elm.trim();
+    if (trimElm.length < 1 || trimElm.length > maxLen) {
+      return false;
+    }
+    return true;
+  }
+
+
 })();
+

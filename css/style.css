@@ -805,6 +805,16 @@ h4 {
 /* ---------------------------------------------------------------------- */
 /* CONTACT BEGIN */
 
+.form-control-text-error {
+  color: var(--tg-main-color-error);
+}
+
+.form-control-text-error:active,
+.form-control-text-error:focus,
+.form-control-text-error:hover {
+  color: var(--tg-main-color-error);
+}
+
 .form-control {
   border: none;
   border-bottom: 1px solid #ccc;
@@ -844,15 +854,6 @@ h4 {
   color: var(--tg-main-color-active);
 }
 
-@media (hover: none) {  
-  /* .form-control {
-    border-bottom: 1px solid var(--tg-main-color-inactive);
-  } */
-
-  /* .form-control:hover::placeholder {
-  } */
-}
-
 .col-form-label {
   color: #000;
   font-size: 13px;
@@ -860,6 +861,7 @@ h4 {
 
 .btn,
 .form-control,
+.form-control-error,
 .custom-select {
   height: 45px;
 }
@@ -972,19 +974,40 @@ label.error {
   resize: vertical;
 }
 
+#form-message-progress,
+#form-message-warning-fields,
 #form-message-warning,
 #form-message-success {
   display: none;
+  font-size: 18px;
+  border-radius: 10px;
+  margin: 5px auto !important;
+  padding: 10px;
 }
 
+#form-message-warning-fields,
 #form-message-warning {
-  color: #B90B0B;
+  color: var(--tg-main-color-error);
+  border: 1px solid var(--tg-main-color-error);
 }
 
 #form-message-success {
-  color: #55A44E;
-  font-size: 18px;
-  font-weight: bold;
+  color: var(--tg-main-color-valid);
+  border: 1px solid var(--tg-main-color-valid);
+}
+
+#form-message-progress {
+  color: var(--tg-main-color-inactive-dark);
+  border: 1px solid var(--tg-main-color-inactive-dark);
+}
+
+.tg-fa-fm-span {
+  padding-left: 10px;
+}
+
+.tg-fa-fm-text {
+  padding-left: 10px;
+  display:inline-block;
 }
 
 .submitting {
@@ -1066,6 +1089,7 @@ label.error {
 }
 
 .fa-linkedin,
+.fa-whatsapp,
 .fa-instagram {
   padding-top: 18px;
 }

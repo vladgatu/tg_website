@@ -192,25 +192,25 @@
                 <form class="mb-5 gform" method="post" id="contactForm" name="contactForm" action="https://script.google.com/macros/s/AKfycbzBbziwqBRUXMdI3ueMbABNLWmPEPzolEniUmfHKpmZmp_VK6gP2q6JsU06EKHBMGx-2Q/exec">
                   <div class="row">
                     <div class="col-md-6 form-group mb-5">
-                      <input type="text" class="form-control" name="first name" id="name" placeholder="Nume">
+                      <input type="text" class="form-control" name="first_name" id="first_name" placeholder="Nume" required>
                     </div>
                     <div class="col-md-6 form-group mb-5">
-                      <input type="text" class="form-control" name="last name" id="name" placeholder="Prenume">
+                      <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Prenume" required>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-12 form-group mb-5">
-                      <input type="text" class="form-control" name="subject" id="subject" placeholder="Subiect">
+                      <input type="text" class="form-control" name="subject" id="subject" placeholder="Subiect" required>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-12 form-group mb-5">
-                      <input type="text" class="form-control" name="email" id="email" placeholder="Adresa de email">
+                      <input type="email" class="form-control" name="email" id="email" placeholder="Adresa de email" required>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-12 form-group mb-5">
-                      <input type="text" class="form-control" name="phone" id="phone" placeholder="Telefon (opțional)">
+                      <input type="number" step="any" class="form-control" name="phone" id="phone" placeholder="Telefon" required>
                     </div>
                   </div>
                   <div class="row honeypot-field">
@@ -221,7 +221,7 @@
                   <div class="row">
                     <div class="col-md-12 form-group mb-5">
                       <textarea class="form-control contact-txt-area" name="message" id="message" cols="30" rows="4"
-                      placeholder="Scrie mesajul aici..."></textarea>
+                      placeholder="Scrie mesajul aici..." required></textarea>
                     </div>
                   </div>
                   <div class="row">
@@ -232,9 +232,33 @@
                     </div>
                   </div>
                 </form>
-                <div id="form-message-warning mt-4"></div>
-                <div id="form-message-success">
-                  Your message was sent, thank you!
+                <div id="form-message-success" class="tg-message-post-form">
+                  <span class="fa fa-check-circle tg-fa-fm-span">
+                    <div class="tg-fa-fm-text">
+                      Mesajul a fost trimis cu succes, vă mulțumim !
+                    </div>
+                  </span>
+                </div>
+                <div id="form-message-progress" class="tg-message-post-form">
+                  <span class="fa fa-gears tg-fa-fm-span">
+                    <div class="tg-fa-fm-text">
+                      Mesajul se trimte...
+                    </div>
+                  </span>
+                </div>
+                <div id="form-message-warning" class="tg-message-post-form">
+                  <span class="fa fa-exclamation-triangle tg-fa-fm-span">
+                    <div class="tg-fa-fm-text">
+                      Mesajul nu s-a putut trimite, încercați mai târziu !
+                    </div>
+                  </span>
+                </div>
+                <div id="form-message-warning-fields" class="tg-message-post-form">
+                  <span class="fa fa-exclamation-triangle tg-fa-fm-span">
+                    <div id="form-message-warning-fields-text" class="tg-fa-fm-text">
+                      Vă rugăm să completați corespunzător și să verificați toate câmpurile înainte de a trimite mesajul !
+                    </div>
+                  </span>
                 </div>
               </div>
             </div>
@@ -242,11 +266,17 @@
               <div class="col-md-12 mb-5 px-5 socials-me">
                 <h4 class="socials-h4">Urmărește-mă</h4>
                 <a class="fa fa-facebook fa-social-btn fa-2x"  target="_blank" href="https://www.facebook.com/dr.elenateodorag"></a>
-                <a class="fa fa-instagram fa-social-btn fa-2x" target="_blank" href="https://www.instagram.com/elena.teodora.g"></a>
+                <!-- <a class="fa fa-instagram fa-social-btn fa-2x" target="_blank" href="https://www.instagram.com/elena.teodora.g"></a> -->
                 <a class="fa fa-linkedin fa-social-btn fa-2x"  target="_blank" href="https://www.linkedin.com/in/elena-teodora-gheorghe-963bb7198"></a>
                 <a class="fa fa-user-md fa-social-btn fa-2x"   data-bs-toggle="tooltip" title="clinica" target="_blank" href="https://www.arthope.ro/"></a>
+                <a class="fa fa-whatsapp fa-social-btn fa-2x" target="_blank" href="https://wa.me/40740475507"></a>
               </div>
               <div class="col-md-12 mb-5 px-5">
+                <span class="fa fa-phone fa-2x py-4">
+                  <div class="tg-fa-fm-text">
+                    +40 740 475 507
+                  </div>
+                </span>
                 <h5 class="tg-work-schedule">Program: </h5>
                 <p class="tg-work-schedule">Miercuri: 14:30 - 21:00</p>
                 <p class="tg-work-schedule">Vineri: 14:30 - 19:00</p>
