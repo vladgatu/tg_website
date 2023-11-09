@@ -1,13 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
+
 <head>
-  <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Bootstrap CSS -->
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
-  <!-- Vendor CSS Files -->
   <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="vendor/fontawesome/css/all.min.css">
   <link rel="stylesheet" type="text/css" href="vendor/owl.carousel/assets/owl.carousel.min.css">
@@ -18,33 +15,34 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&display=swap">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <script type="text/javascript" language="javascript" src="vendor/jquery/jquery.min.js"></script>
   <script type="text/javascript" language="javascript" src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script type="text/javascript" language="javascript" src="vendor/owl.carousel/owl.carousel.min.js"></script>
   <script type="text/javascript" language="javascript" src="js/carousel/carousel.js"></script>
-  <script type="text/javascript" language="javascript" src="content/tg_info.js"></script>
   <script type="text/javascript" language="javascript" src="js/main.js"></script>
+
+  <!-- <script data-cfasync="false" src="js/email/send-email.js"></script> -->
 
   <title>Dr. Elena-Teodora Gheorghe</title>
 </head>
-
-<body class="body-custom">
+<body class="body-custom" data-spy="scroll" data-target=".navbar" data-offset="50">
   <section class="ftco-section">
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <nav class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light fixed-top" id="ftco-navbar">
       <div class="container">
         <img src="media/logo/logo_en.png" alt="Dr. Elena-Teodora Gheorghe"  class="navbar-brand">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
           aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="fa fa-bars"></span> Menu
+          <span class="fa fa-bars"></span> Meniu
         </button>
         <div class="collapse navbar-collapse" id="ftco-nav">
           <ul class="navbar-nav m-auto">
-            <li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">About me</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Work</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">FAQ</a></li>
+            <li class="nav-item"><a href="#tg_about" class="nav-link">Home</a></li>
+            <!-- <li class="nav-item"><a href="#tg_work" class="nav-link">Work</a></li> -->
+            <li class="nav-item"><a href="#tg_services" class="nav-link">Services</a></li>
+            <li class="nav-item"><a href="#tg_contact" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="#tg_faq" class="nav-link">FAQ</a></li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <img class="dropdown-toggle-img" src="media/lang/flag_en.png" alt="Language: EN">
@@ -59,16 +57,233 @@
         </div>
       </div>
     </nav>
-    <!-- END nav -->
   </section>
-  <section id="tg_free_work" class="carousel_se_01">
+  <section id="tg_about">
+    <div class="container container-fluid px-0 py-5">
+      <div class="row py-5">
+        <!-- <div class="col-lg-12 mx-auto text-white text-center">
+          <h1 class="display-4">Despre mine</h1>
+        </div> -->
+      </div>
+      <div class="container py-5 ">
+        <div class="row ">
+          <div class="col-md-6 d-flex justify-content-center ">
+            <img class="tg-about-round-picture-img " src="media/personal/presentation.jpeg">
+          </div>
+          <div class="col-md-6 pt-4 justify-content-center ">
+            <div class="py-5"></div>
+            <div class="tg-about-title">Dr. Elena-Teodora Gheorghe</div>
+            <div class="py-4"></div>
+            <h5 class="tg-about-description py-5 mx-auto">
+              <div>
+				I am an endocrinologist, I graduated med school "UMF Carol Davila" university from Bucharest.
+              </div>
+              <br>
+              <div>
+                I trained as a resident endocrinologist at the Elias Emergency Hospital in Bucharest during 2018-2022, where I had the opportunity to gain experience in both adult and child endocrinological pathology.
+              </div>
+            </h4>
+          </div>
+        </div>
+        <!-- <div class="d-flex align-items-center justify-content-center tg-about-behind-bg-container ">
+          <div class=" tg-about-behind-bg">
+  
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </section>
+  <!-- <section id="tg_work" class="tg-carousel py-5">
     <div class="container-fluid px-0 py-5">
-      <div class="container pt-5">
-        <div class="row">
-          <div class="col-md-12 px-0  pt-5">
-            <div class="col-md-12 px-0 p-t-30 ">
-              <div id="owl-carousel-container" class="owl-carousel carousel_se_01_carousel owl-theme">
-                <!-- this inner elements /items is dinamically filled -->
+      <div class="row">
+        <div class="col-lg-12 mx-auto text-white text-center">
+          <h1 class="display-4">Publicații</h1>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row px-1">
+          <div class="col-md-12 pt-4">
+            <div class="col-md-12 p-t-30 ">
+              <div id="owl-carousel-container-posts" class="owl-carousel owl-theme tg-carousel-posts">
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row px-1">
+          <div class="col-md-12 pt-4">
+            <div class="col-md-12 p-t-30 ">
+              <div id="owl-carousel-container-work" class="owl-carousel owl-theme tg-carousel-work">
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <section id="tg_services">
+    <div class="container container-fluid px-0 py-2">
+      <div class="row py-5">
+        <div class="col-lg-12 mx-auto text-center">
+          <h1 class="display-4">Services</h1>
+        </div>
+      </div>
+      <div class="container-fluid px-5">
+        <div class="row tg-services-row-container">
+          <div class="col-lg-6 ">
+            <div class="row tg-services-row-element">
+              <div class="col-md-6 d-flex justify-content-center">
+                <div>
+                  <img class="tg-services-round-picture-img" src="media/services/consult.PNG">
+                  <p>Endocrinological checkup for adults</p>
+                </div>
+              </div>
+              <div class="col-md-6 d-flex justify-content-center">
+                <div>
+                  <img class="tg-services-round-picture-img" src="media/services/pediatrie.PNG">
+                  <p>Endocrinological checkup for children</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 ">
+            <div class="row tg-services-row-element">
+              <div class="col-md-6 d-flex justify-content-center">
+                <div>
+                  <img class="tg-services-round-picture-img" src="media/services/analize.PNG">
+                  <p>Interpretation and advice for medical tests</p>
+                </div>
+              </div>
+              <div class="col-md-6 d-flex justify-content-center">
+                <div>
+                  <img class="tg-services-round-picture-img" src="media/services/ecograf.PNG">
+                  <p>Thyroid ultrasound examination</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md py-5">
+            <i><span class="fa fa-exclamation-circle"></span> Endocrinologic checkups are made with referral ticket or payment</i><br>
+            <i><span class="fa fa-exclamation-circle"></span> Thyroid ultrasound examination is made only with a fee</i>
+          </div>
+        </div>
+      </div>
+  </section>
+  <section>
+  </section>
+  <section id="tg_contact">
+    <div class="container container-fluid px-0 py-2">
+      <div class="row py-5">
+        <div class="col-lg-12 mx-auto text-white text-center">
+          <h1 class="display-4">Contact</h1>
+        </div>
+      </div>
+      <div class="content">
+        <div class="container">
+          <div class="row align-items-stretch no-gutters contact-wrap">
+            <div class="col-md-6">
+              <div class="form">
+                <h3 class="contact-label-text">Send me a message</h3>
+                <form class="mb-5 gform" method="post" id="contactForm" name="contactForm" action="https://script.google.com/macros/s/AKfycbzBbziwqBRUXMdI3ueMbABNLWmPEPzolEniUmfHKpmZmp_VK6gP2q6JsU06EKHBMGx-2Q/exec">
+                  <div class="row">
+                    <div class="col-md-6 form-group mb-5">
+                      <input type="text" class="form-control" name="first_name" id="first_name" placeholder="First name" required>
+                    </div>
+                    <div class="col-md-6 form-group mb-5">
+                      <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Last name" required>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 form-group mb-5">
+                      <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 form-group mb-5">
+                      <input type="email" class="form-control" name="email" id="email" placeholder="Your email address" required>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 form-group mb-5">
+                      <input type="number" step="any" class="form-control" name="phone" id="phone" placeholder="Phone number" required>
+                    </div>
+                  </div>
+                  <div class="row honeypot-field">
+                    <div class="col-md-12 form-group mb-5">
+                      <input type="text" class="form-control" name="honeypot" id="honeypot" placeholder="honeypot" value="">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 form-group mb-5">
+                      <textarea class="form-control contact-txt-area" name="message" id="message" cols="30" rows="4"
+                      placeholder="Write your message here..." required></textarea>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 form-group">
+                      <!-- <input type="submit" value="Trimite" class="btn btn-primary py-2 px-4"> -->
+                      <button class="btn btn-primary py-2 px-4">Send</button>
+                      <span class="submitting"></span>
+                    </div>
+                  </div>
+                </form>
+                <div id="form-message-success" class="tg-message-post-form">
+                  <span class="fa fa-check-circle tg-fa-fm-span">
+                    <div class="tg-fa-fm-text">
+                      The message was sent successfully, thank you!
+                    </div>
+                  </span>
+                </div>
+                <div id="form-message-progress" class="tg-message-post-form">
+                  <span class="fa fa-gears tg-fa-fm-span">
+                    <div class="tg-fa-fm-text">
+                      The message is sending...
+                    </div>
+                  </span>
+                </div>
+                <div id="form-message-warning" class="tg-message-post-form">
+                  <span class="fa fa-exclamation-triangle tg-fa-fm-span">
+                    <div class="tg-fa-fm-text">
+                      The message could not be sent, try again later!
+                    </div>
+                  </span>
+                </div>
+                <div id="form-message-warning-fields" class="tg-message-post-form">
+                  <span class="fa fa-exclamation-triangle tg-fa-fm-span">
+                    <div id="form-message-warning-fields-text" class="tg-fa-fm-text">
+                      Please fill in properly and check all fields before sending your message!
+                    </div>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 py-5 constact-right-column">
+              <div class="col-md-12 mb-5 px-5 socials-me">
+                <h4 class="socials-h4">Follow me</h4>
+                <a class="fa fa-facebook fa-social-btn fa-2x"  target="_blank" href="https://www.facebook.com/dr.elenateodorag"></a>
+                <!-- <a class="fa fa-instagram fa-social-btn fa-2x" target="_blank" href="https://www.instagram.com/elena.teodora.g"></a> -->
+                <a class="fa fa-linkedin fa-social-btn fa-2x"  target="_blank" href="https://www.linkedin.com/in/elena-teodora-gheorghe-963bb7198"></a>
+                <a class="fa fa-user-md fa-social-btn fa-2x"   data-bs-toggle="tooltip" title="clinica" target="_blank" href="https://www.arthope.ro/"></a>
+                <a class="fa fa-whatsapp fa-social-btn fa-2x" target="_blank" href="https://wa.me/40740475507"></a>
+              </div>
+              <div class="col-md-12 mb-5 px-5">
+                <span class="fa fa-phone fa-2x py-4">
+                  <div class="tg-fa-fm-text">
+                    +40 740 475 507
+                  </div>
+                </span>
+                <h5 class="tg-work-schedule">Schedule: </h5>
+                <p class="tg-work-schedule">Wednesday: 02:30 PM - 09:00 PM</p>
+                <p class="tg-work-schedule">Friday: 02:30 PM - 07:00 PM</p>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1423.9898763321141!2d26.123025298394786!3d44.454086399999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1f8c634780abd%3A0x5788ef22e3c308a0!2sPoliclinica%20Ma%C8%99ina%20de%20P%C3%A2ine!5e0!3m2!1sro!2sro!4v1694030264571!5m2!1sro!2sro"
+                  class="w-100 contact-map-area" height="450" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
               </div>
             </div>
           </div>
@@ -76,6 +291,199 @@
       </div>
     </div>
   </section>
+  <section id="tg_faq" class="faq-section">
+    <div class="container container-fluid px-0 py-2">
+      <div class="row py-5">
+        <div class="col-lg-12 mx-auto text-white text-center">
+          <h1 class="display-4">FAQ</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 mx-auto">
+          <div id="tg_faq_accordion" class="accordion shadow">
+            <div class="card accordion-card">
+              <div id="tg_faq_heading_1" class="card-header bg-white shadow-sm border-0">
+                <h6 class="mb-0 font-weight-bold">
+                  <a href="#" data-toggle="collapse" data-target="#tg_faq_collapse_1"
+                    aria-expanded="true" aria-controls="tg_faq_collapse_1"
+                    class="d-block position-relative text-dark text-uppercase collapsible-link py-2">
+                    What is endocrinology?
+                  </a>
+                </h6>
+              </div>
+              <div id="tg_faq_collapse_1" aria-labelledby="tg_faq_heading_1" data-parent="#tg_faq_accordion" class="collapse show">
+                <div class="card-body p-5">
+                  <div class="font-weight-light m-0">
+                    <p>
+					  Endocrinology is a branch of medicine that studies the endocrine system.
+                      The endocrinologist deals with the diagnosis and treatment of hormonal conditions, and endocrine diseases can occur in both adults and children.
+                    </p>
+                    <p>Here are some conditions that are treated by the endocrinologist:</p>
+                    <ul>
+                      <li class="tg-faq-li">pituitary adenomas (pituitary tumors that may secrete hormones or be non-functional)</li>
+                      <li class="tg-faq-li">diabetes insipidus (excessive thirst associated with excessive urination)</li>
+                      <li class="tg-faq-li">hyperthyroidism (excessive production of thyroid hormones)</li>
+                      <li class="tg-faq-li">hypothyroidism (insufficient production of thyroid hormones)</li>
+                      <li class="tg-faq-li">autoimmune thyroiditis</li>
+                      <li class="tg-faq-li">thyroid nodules</li>
+                      <li class="tg-faq-li">thyroid cancer</li>
+                      <li class="tg-faq-li">hyperparathyroidism (high level of PTH in the blood)</li>
+                      <li class="tg-faq-li">hypoparathyroidism (low level of PTH in the blood)</li>
+                      <li class="tg-faq-li">hypercorticism (increased level of cortisol in the blood)</li>
+                      <li class="tg-faq-li">adrenal insufficiency (low level of cortisol in the blood)</li>
+                      <li class="tg-faq-li">secondary arterial hypertension of endocrine cause</li>
+                      <li class="tg-faq-li">polycystic ovary syndrome</li>
+                      <li class="tg-faq-li">infertility</li>
+                      <li class="tg-faq-li">osteoporosis</li>
+                      <li class="tg-faq-li">precocious puberty or delayed puberty (in children)</li>
+                      <li class="tg-faq-li">short stature in children</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card accordion-card">
+              <div id="tg_faq_heading_2" class="card-header bg-white shadow-sm border-0">
+                <h6 class="mb-0 font-weight-bold">
+                  <a href="#" data-toggle="collapse" data-target="#tg_faq_collapse_2"
+                    aria-expanded="false" aria-controls="tg_faq_collapse_2"
+                    class="d-block position-relative collapsed text-dark text-uppercase collapsible-link py-2">
+                    What documents are required for a checkup?
+                  </a>
+                </h6>
+              </div>
+              <div id="tg_faq_collapse_2" aria-labelledby="tg_faq_heading_2" data-parent="#tg_faq_accordion" class="collapse">
+                <div class="card-body p-5">
+                  <div class="font-weight-light m-0">
+                    <p>It is necessary for the patient to bring to the office:</p>
+                    <ul>
+                      <li class="tg-faq-li">medical documents (medical letters, hospitalization files, results of investigations made before, other medical tests or files)</li>
+                      <li class="tg-faq-li">any identification document (ID, passport)</li>
+                      <li class="tg-faq-li">birth certificate or identification document (for children)</li>
+                    </ul>
+                    <br><br>
+                    <p>For a checkup settled by the romanian insurance program, you also need:</p>
+                    <ul>
+                      <li class="tg-faq-li">romanian or european health card (for adults)</li>
+                      <li class="tg-faq-li">referral letter from the family doctor or the specialist doctor for checkups settled by the romanian insurance program</li>
+                      <li class="tg-faq-li">insurance certificate for insured persons who do not have a romanian health card</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card accordion-card">
+              <div id="tg_faq_heading_3" class="card-header bg-white shadow-sm border-0">
+                <h6 class="mb-0 font-weight-bold">
+                  <a href="#" data-toggle="collapse" data-target="#tg_faq_collapse_3"
+                    aria-expanded="false" aria-controls="tg_faq_collapse_3"
+                    class="d-block position-relative collapsed text-dark text-uppercase collapsible-link py-2">
+                    When is necessary an endocrinological checkup?
+                  </a>
+                </h6>
+              </div>
+              <div id="tg_faq_collapse_3" aria-labelledby="tg_faq_heading_3" data-parent="#tg_faq_accordion" class="collapse">
+                <div class="card-body p-5">
+                  <div class="font-weight-light m-0">
+                    <p>If you have the following clinical manifestations, you may need an endocrinological checkup:</p>
+                    <ul>
+                      <li class="tg-faq-li">unexplained fatigue</li>
+                      <li class="tg-faq-li">difficulty concentrating</li>
+                      <li class="tg-faq-li">memory disorders</li>
+                      <li class="tg-faq-li">agitation</li>
+                      <li class="tg-faq-li">hair loss</li>
+                      <li class="tg-faq-li">menstrual cycle disorders in women</li>
+                      <li class="tg-faq-li">excess body hair in women</li>
+                      <li class="tg-faq-li">unwarranted feeling of cold or heat</li>
+                      <li class="tg-faq-li">red-purple stretch marks (abdomen, arms, thighs, breasts)</li>
+                      <li class="tg-faq-li">unexplained weight gain or loss</li>
+                      <li class="tg-faq-li">infertility</li>
+                      <li class="tg-faq-li">sleeping disorders</li>
+                      <li class="tg-faq-li">gynecomastia (breast enlargement in men)</li>
+                      <li class="tg-faq-li">fragility fractures (occurring from falling from your own height)</li>
+                      <li class="tg-faq-li">galactorrhea (nipple discharge)</li>
+                      <li class="tg-faq-li">excessive thirst associated with urinating in large quantities</li>
+                      <li class="tg-faq-li">muscle weakness</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card accordion-card">
+              <div id="tg_faq_heading_4" class="card-header bg-white shadow-sm border-0">
+                <h6 class="mb-0 font-weight-bold">
+                  <a href="#" data-toggle="collapse" data-target="#tg_faq_collapse_4"
+                    aria-expanded="false" aria-controls="tg_faq_collapse_4"
+                    class="d-block position-relative collapsed text-dark text-uppercase collapsible-link py-2">
+                    What are the prices for the medical services?
+                  </a>
+                </h6>
+              </div>
+              <div id="tg_faq_collapse_4" aria-labelledby="tg_faq_heading_4" data-parent="#tg_faq_accordion" class="collapse">
+                <div class="card-body p-5">
+                  <div class="font-weight-light m-0">
+                    <p>Medical services fees:</p>
+                    <ul>
+                      <li class="tg-faq-li">Endocrinological checkup for adults - 230 RON</li>
+                      <li class="tg-faq-li">Endocrinological checkup for children - 250 RON</li>
+                      <li class="tg-faq-li">Interpretation and advice for medical tests - 160 RON</li>
+                      <li class="tg-faq-li">Thyroid ultrasound examination - 220 RON</li>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="page-footer font-small teal pt-5 ">
+    <div class="container container-fluid px-0 py-5 tg-footer">
+      <!-- <div class="container-fluid text-center text-md-left">
+        <div class="row">
+          <div class="col-md-6 mt-md-0 mt-3">
+            <h5 class="text-uppercase font-weight-bold">Meniu</h5>
+            <a href="#">
+              <p class="tg-footer-menu-item">Acasa</p>
+            </a>
+            <a href="#tg_about">
+              <p class="tg-footer-menu-item">Publicatii</p>
+            </a>
+            <a href="#">
+              <p class="tg-footer-menu-item">Servicii</p>
+            </a>
+            <a href="#">
+              <p class="tg-footer-menu-item">Contact</p>
+            </a>
+            <a href="#">
+              <p class="tg-footer-menu-item">Intrebari frecvente</p>
+            </a>
+          </div>
+          <hr class="clearfix w-100 d-md-none pb-3">
+          <div class="col-md-6 mb-md-0 mb-3">
+            <h5 class="text-uppercase font-weight-bold">Footer text 2</h5>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio deserunt fuga perferendis modi earum
+              commodi aperiam temporibus quod nulla nesciunt aliquid debitis ullam omnis quos ipsam, aspernatur id
+              excepturi hic.
+            </p>
+          </div>
+        </div>
+      </div> -->
+    </div>
+    <div class="footer-copyright text-center py-3 tg-footer-copyright">
+      <div class="tg-footer-copyright-link-pos-a">
+        © 2023 Copyright:
+        <a class="tg-footer-copyright-link" href="https://www.linkedin.com/in/constantin-vlad-gatu-642318142" target="_blank">
+          Constantin-Vlad Gațu
+          <i class="fa fa-globe"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+  <div class="progress-wrap">
+		<svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+			<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+		</svg>
+	</div>
 </body>
-
 </html>
