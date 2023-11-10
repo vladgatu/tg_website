@@ -134,7 +134,7 @@
   }
 
   function handleNotValidResultFields(fields) {
-    if (!fields) {
+    if (!fields.length) {
       return true;
     }
 
@@ -155,8 +155,6 @@
 
   function validateForm(formData) {
     var fieldList = []
-
-    // console.log(formData);
 
     if (!validateEmail(formData.data.email)) {
       fieldList.push('email');
@@ -182,8 +180,6 @@
       fieldList.push('message');
     }
 
-    // console.log(fieldList);
-
     return fieldList;
   }
 
@@ -205,10 +201,6 @@
   
   function validateJustText(elm, maxLen = 150) {
     const trimElm = elm.trim();
-    // if (trimElm.length < 1 || trimElm.length > maxLen) {
-    //   return false;
-    // }
-    // return trimElm.match(`/^[a-zA-Z ]{1,${maxLen}}$/`) != null;
     return trimElm.match(/^[a-zA-Z ]{1,50}$/) != null;
   }
 
